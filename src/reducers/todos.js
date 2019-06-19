@@ -17,7 +17,7 @@ function todos(state = [], action) {
         draft[id].completed = !draft[id].completed;
         break;
       default:
-        return state;
+        return;
     }
   });
 }
