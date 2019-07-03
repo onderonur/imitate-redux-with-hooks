@@ -1,6 +1,6 @@
 import produce from "immer";
 
-function useCombinedReducer(combinedReducers) {
+function useCombinedReducers(combinedReducers) {
   // Global State
   const state = Object.keys(combinedReducers).reduce((acc, key) => {
     return produce(acc, draft => {
@@ -17,4 +17,4 @@ function useCombinedReducer(combinedReducers) {
   return [state, dispatch];
 }
 
-export default useCombinedReducer;
+export default useCombinedReducers;
